@@ -1,5 +1,8 @@
-const colorToggle = document.getElementById('link');
 
-colorToggle.addEventListener('mouseover', function handleMouseOver(){colorToggle.style.color = '#fff';});
+const colorToggle = document.querySelectorAll('#link');
 
-colorToggle.addEventListener('mouseout', function handleMouseOver(){colorToggle.style.color = '#9198e5';});
+for(let i = 0; i < colorToggle.length; i++){
+  colorToggle[i].addEventListener('mouseover', function handleMouseOver(){colorToggle[i].style.color = '#fff';});
+
+colorToggle[i].addEventListener('mouseout', function handleMouseOver(){colorToggle[i].style.color = '#9198e5';});
+}
